@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--main-color);
+}
+
+:root {
+    --main-color: #161623;
+    --yellow: #e4e419;
+    --Purple: #8a2ce2;
+}
+
+.profile-card {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Purple);
+    clip-path: circle(30% at 0 0);
+}
+
+.profile-card::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow);
+    clip-path: circle(20% at 100% 100%);
+}
