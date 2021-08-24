@@ -56,5 +56,20 @@ body {
     background-color: var(--secondary-color);
     margin: 20px;
     border-radius: 20px;
-    filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .img-profile {
+    margin-bottom: 50px;
+}
+
+.card .img-profile img {
+    width: 160px;
+    height: 160px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
 }
