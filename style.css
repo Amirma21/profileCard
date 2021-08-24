@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-wrap: wrap;
     background: var(--main-color);
 }
 
@@ -15,27 +15,46 @@ body {
     --main-color: #161623;
     --yellow: #e4e419;
     --Purple: #8a2ce2;
-}
-
-.profile-card {
-    width: 100%;
-    height: 100%;
+    --secondary-color: #3c3752;
 }
 
 .profile-card::after {
     content: " ";
     position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background-color: var(--Purple);
     clip-path: circle(30% at 0 0);
+    filter: blur(8px);
 }
 
 .profile-card::before {
     content: " ";
     position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background-color: var(--yellow);
-    clip-path: circle(20% at 100% 100%);
+    clip-path: circle(20.4% at 100% 100%);
+}
+
+.contaier {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.contaier .card {
+    width: 300px;
+    height: 400px;
+    background-color: var(--secondary-color);
+    margin: 20px;
+    border-radius: 20px;
+    filter: blur(1px);
 }
